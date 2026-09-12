@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-09-12T13:51:07.604502+00:00",
+  "config": {
+    "neighbours": 10,
+    "permutations": 1000,
+    "permutation_seed": 20260912
+  },
+  "objects": 2252,
+  "matched_pairs": 1126,
+  "dimensions": 40,
+  "source_sha": "e3c43d3e2796a0913bacca6ff8b0f7b0be70bceeccc3098f3a5ffde16732508e",
+  "sample_sha": "7e5b07c9d9ca992ec381713159154c7e652ac519e9761a882544a99044d45659",
+  "candidate_counts": {
+    "A": 112,
+    "B": 131,
+    "C": 883
+  },
+  "representation": "The authors' published 40 PCA coordinates, unchanged; exact Euclidean neighbours; no local training, PCA, whitening or rescaling.",
+  "primary": {
+    "sets": 1126,
+    "objects": 2252,
+    "references_per_candidate": 1,
+    "eligible_candidate_fraction": 0.5,
+    "candidate_neighbour_fraction": 0.8141207815275311,
+    "reference_neighbour_fraction": 0.25301953818827705,
+    "difference": 0.561101243339254,
+    "candidate_neighbour_enrichment": 1.6282415630550622,
+    "reference_neighbour_enrichment": 0.5060390763765541,
+    "integer_numerator": 6318,
+    "integer_denominator": 11260,
+    "interpretation": "Association with prior candidate selection, not precision, recall, accuracy, or lens prevalence.",
+    "null_assumption": "One candidate uniformly assigned within each fixed matched set; conditional observational exchangeability is not guaranteed by approximate matching or spatial exclusion.",
+    "permutations": 1000,
+    "permutation_p_two_sided": 0.000999000999000999,
+    "null_95_percent_interval": [
+      -0.01740896980461812,
+      0.017053730017761986
+    ],
+    "null_mean": 6.385435168738905e-05
+  },
+  "scope_limit": "The corpus is deliberately balanced at one candidate per pair, not representative of Q1 lens prevalence. References are outside the published candidate list, not confirmed non-lenses. Matching and same-pair exclusion do not remove other spatial dependencies or prior candidate-selection biases.",
+  "source_url": "https://zenodo.org/records/15106473"
+}

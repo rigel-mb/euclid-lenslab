@@ -1,0 +1,25 @@
+{
+  "seed": 20260918,
+  "selection_rule": "For A, B and C independently: sort candidate object IDs, then pandas.sample(n=1, random_state=20260918). Keep its matched reference. Freeze before reading neighbour results or image availability.",
+  "sample_sha256": "7e5b07c9d9ca992ec381713159154c7e652ac519e9761a882544a99044d45659",
+  "pairs": [
+    {
+      "grade": "A",
+      "set_id": "set_2646461630654930628",
+      "candidate_id": "2646461630654930628",
+      "reference_id": "2646652043654908900"
+    },
+    {
+      "grade": "B",
+      "set_id": "set_-579460447477747720",
+      "candidate_id": "-579460447477747720",
+      "reference_id": "-579543869477457137"
+    },
+    {
+      "grade": "C",
+      "set_id": "set_2748353358663206335",
+      "candidate_id": "2748353358663206335",
+      "reference_id": "2748050561663089946"
+    }
+  ]
+}

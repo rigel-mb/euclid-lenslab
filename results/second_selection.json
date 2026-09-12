@@ -1,0 +1,16 @@
+{
+  "seed": 20260915,
+  "requested_sets_per_grade": 20,
+  "selected_sets": 60,
+  "selected_objects": 120,
+  "candidate_grades": {
+    "C": 20,
+    "A": 20,
+    "B": 20
+  },
+  "references_per_candidate": 1,
+  "rule": "Sort candidate object IDs, then take up to 20 sets per A/B/C grade using seed 20260915; retain every matched reference from the primary cohort. Freeze before image acquisition and second-encoder outputs.",
+  "image_failure_rule": "Exclude the entire incomplete set from the comparison; no replacement set or relaxed image-quality criterion.",
+  "expanded_sample_sha256": "7e5b07c9d9ca992ec381713159154c7e652ac519e9761a882544a99044d45659",
+  "subset_sha256": "0e4056b2f1889b0f176d61b63693e9e70fcf3db82b816979f649ec405e405556"
+}

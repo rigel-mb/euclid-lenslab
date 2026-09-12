@@ -1,0 +1,192 @@
+{
+  "seed": 20260913,
+  "references_per_candidate": 1,
+  "design": "All eligible published candidates; exactly 1 local unlabelled reference(s) per retained candidate, without replacement.",
+  "candidate_flow": {
+    "published_unique_candidates": 2415,
+    "with_published_representation": 1416,
+    "missing_representation": 999,
+    "excluded_common_cuts_after_representation": 1,
+    "eligible_candidates": 1415,
+    "retained_candidates": 1126,
+    "at_least_required_options_before_competition": 1126,
+    "fewer_than_required_options_before_competition": 289,
+    "dropped_after_competition": 0,
+    "retained_references": 1126,
+    "final_objects": 2252
+  },
+  "by_grade": {
+    "published": {
+      "A": 250,
+      "B": 247,
+      "C": 1918
+    },
+    "with_representation": {
+      "A": 156,
+      "B": 163,
+      "C": 1097
+    },
+    "eligible": {
+      "A": 156,
+      "B": 162,
+      "C": 1097
+    },
+    "retained": {
+      "A": 112,
+      "B": 131,
+      "C": 883
+    }
+  },
+  "reference_pool_flow": {
+    "published_representations_total": 380111,
+    "archive_unique_objects_with_common_cuts_near_candidates": 86072,
+    "query_batches_of_at_most_ten_circles": 142,
+    "published_candidate_positions_used_for_exclusion": 2584,
+    "excluded_published_candidate_ids": 1484,
+    "excluded_missing_representation": 57803,
+    "excluded_within_20arcsec_of_any_published_position": 1466,
+    "eligible_reference_pool": 25319,
+    "eligible_references_matching_at_least_one_candidate": 3789,
+    "selected_references": 1126
+  },
+  "candidate_options_histogram": {
+    "0": 289,
+    "1": 282,
+    "2": 222,
+    "3": 182,
+    "4": 155,
+    "5": 106,
+    "6": 56,
+    "7": 43,
+    "8": 35,
+    "9": 19,
+    "10": 10,
+    "11": 4,
+    "12": 4,
+    "13": 4,
+    "14": 1,
+    "15": 1,
+    "16": 2
+  },
+  "candidate_options_quantiles": {
+    "0.0": 0.0,
+    "0.1": 0.0,
+    "0.25": 1.0,
+    "0.5": 2.0,
+    "0.75": 4.0,
+    "0.9": 6.0,
+    "1.0": 16.0
+  },
+  "ratio_feasibility_only": {
+    "1": {
+      "matched_candidates": 1126,
+      "reference_objects": 1126,
+      "total_objects": 2252,
+      "matched_by_grade": {
+        "A": 112,
+        "B": 131,
+        "C": 883
+      }
+    },
+    "2": {
+      "matched_candidates": 844,
+      "reference_objects": 1688,
+      "total_objects": 2532,
+      "matched_by_grade": {
+        "A": 73,
+        "B": 100,
+        "C": 671
+      }
+    },
+    "3": {
+      "matched_candidates": 618,
+      "reference_objects": 1854,
+      "total_objects": 2472,
+      "matched_by_grade": {
+        "A": 50,
+        "B": 72,
+        "C": 496
+      }
+    },
+    "4": {
+      "matched_candidates": 438,
+      "reference_objects": 1752,
+      "total_objects": 2190,
+      "matched_by_grade": {
+        "A": 36,
+        "B": 55,
+        "C": 347
+      }
+    }
+  },
+  "ratio_choice": "The proposed 1:4 extension retained only 438 of 1415 eligible candidates. The 1:1 design was therefore selected using catalogue feasibility alone, before computing any extension clusters or outcome statistics. It preserves 1126 candidates versus 844 at 1:2, avoids new ratio weighting, and keeps the original calipers. The earlier 1:1 pilot was already known.",
+  "calipers": {
+    "radius_arcsec": 108.0,
+    "absolute_magnitude_difference": 0.3,
+    "absolute_log10_area_difference": 0.2,
+    "minimum_reference_distance_from_any_published_candidate_arcsec": 20.0
+  },
+  "common_cuts": "VIS detection=1; segmentation_area>=300 pixels; detection total flux>3.6307805477 microJy (AB<22.5); finite coordinates.",
+  "matching_order": "Sort candidate object_id as strings, then pandas sample(frac=1, random_state=20260913).",
+  "matching_cost": "(delta_mag/0.3)^2 + (delta_log10_area/0.2)^2 + 0.01*(separation_deg/0.03)^2; ties by reference object_id.",
+  "incomplete_sets": "If fewer than 1 unused admissible reference(s) remain, exclude the candidate and reserve no reference. No calipers are widened; no resampling of candidates.",
+  "not_used_for_matching": [
+    "expert grade or score",
+    "colour",
+    "ellipticity",
+    "image pixels",
+    "representation values"
+  ],
+  "interpretation": "Reference objects are unlabelled, not verified non-lenses. The 50 percent candidate fraction is an analysis design, not an estimated survey prevalence.",
+  "spatial_scope": "Local circles around all 1415 eligible candidates across the Q1 deep fields; not limited to the initial three EDA patches.",
+  "representation_source": "All retained objects use the unchanged 40-D file released at Zenodo 15106473. No new encoder is run to fill missing candidate IDs.",
+  "input_candidates_sha256": "e2ead57979dbf25ed88a87db68f19ce50e6ca9250231abf23827f5ad33cdc0da",
+  "input_published_catalogue_sha256": "ee5e60cd507413eabf3da8ffa37a3c527212da00feb29083cf516a86d6f26877",
+  "input_available_ids_sha256": "bf4e1db0e7feec8c0ed4edacf7b25fd32bf3b5db49a1c12613fcea878e3caef3",
+  "input_representation_sha256": "e3c43d3e2796a0913bacca6ff8b0f7b0be70bceeccc3098f3a5ffde16732508e",
+  "candidate_selection_status_by_grade": {
+    "fails_common_cuts": {
+      "A": 0,
+      "B": 1,
+      "C": 0
+    },
+    "fewer_than_required_admissible_references": {
+      "A": 44,
+      "B": 31,
+      "C": 214
+    },
+    "missing_published_representation": {
+      "A": 94,
+      "B": 84,
+      "C": 821
+    },
+    "retained": {
+      "A": 112,
+      "B": 131,
+      "C": 883
+    }
+  },
+  "retained_candidate_counts_by_field": {
+    "fornax": 209,
+    "north": 409,
+    "south": 508
+  },
+  "balance": {
+    "mag_total": {
+      "candidate_median": 20.56690414124359,
+      "reference_median": 20.558199982545055,
+      "standardized_mean_difference": -0.0013649677739259842
+    },
+    "log_area": {
+      "candidate_median": 3.1528994890058772,
+      "reference_median": 3.136085981350906,
+      "standardized_mean_difference": 0.05500598288640497
+    },
+    "snr_total": {
+      "candidate_median": 122.9318784441354,
+      "reference_median": 118.4693649655622,
+      "standardized_mean_difference": 0.04390198131413979
+    }
+  },
+  "sample_sha256": "7e5b07c9d9ca992ec381713159154c7e652ac519e9761a882544a99044d45659"
+}

@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-09-12T12:45:30.259582+00:00",
+  "model_id": "facebook/dinov2-small",
+  "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+  "checkpoint_license": "Apache-2.0 (official Hugging Face repository)",
+  "redistribution_sources": {
+    "license_url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/LICENSE",
+    "license_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "license_sha256": "600cc67cc4cb2f5ea317dcfc687ad1c74dc4bec8782bbe9db0afd83513b935b7",
+    "model_card_url": "https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/README.md",
+    "model_card_sha256": "4c20dca454a8e5c670e8de5c7e6040f512aeca5438516f7623eedc4e3b00599c"
+  },
+  "model_url": "https://huggingface.co/facebook/dinov2-small/tree/ed25f3a31f01632728cabb09d1542f84ab7b0056",
+  "paper_url": "https://arxiv.org/abs/2304.07193",
+  "architecture": "DINOv2 ViT-S/14: 12 blocks, 6 heads, hidden width 384; no task head.",
+  "upstream_learning": "Self-supervised pretraining/distillation on general images, by the model authors.",
+  "local_learning": "Frozen feature extraction only: eval mode, no gradient, no fine-tuning, no grades supplied to the encoder.",
+  "parameters": 22056576,
+  "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "model_file_sha256": {
+    "config.json": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+    "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+    "model.safetensors": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1"
+  },
+  "selected_objects": 120,
+  "selected_sets": 60,
+  "references_per_candidate": 1,
+  "complete_objects": 118,
+  "complete_sets": 59,
+  "selected_candidate_grades": {
+    "C": 20,
+    "A": 20,
+    "B": 20
+  },
+  "complete_candidate_grades": {
+    "A": 20,
+    "B": 20,
+    "C": 19
+  },
+  "missing_stamp_ids": [
+    "-586591064470200400"
+  ],
+  "invalid_stamp_ids": [],
+  "excluded_set_ids": [
+    "set_-586793787470192432"
+  ],
+  "input": {
+    "stamp": "96x96 VIS, 0.1 arcsec/pixel, north up and east left.",
+    "stretch": "Subtract the median outer 12-pixel border; positive residuals; clip at the per-image 99.5th percentile; arcsinh(10*x)/arcsinh(10).",
+    "rgb": "The stretched VIS values are rounded to uint8 and replicated into all three channels; no colour information.",
+    "official_processor": "Slow BitImageProcessor from the pinned release: bicubic resize shortest edge to 256; centre crop 224x224; rescale 1/255; ImageNet mean/std.",
+    "effective_angular_crop_arcsec": 8.4,
+    "augmentation": "None; no random crops, rotations or test-time averaging."
+  },
+  "features": {
+    "dino": "384-dimensional final layer-normalized CLS token; L2-normalized per object for Euclidean neighbours (equivalent ordering to cosine similarity). Raw features are retained too.",
+    "zoobot": "Original 40 published PCA coordinates, unchanged and joined by exact MER object_id.",
+    "space_handling": "Neighbours are recomputed independently inside each space on exactly the same objects. Coordinates from different encoders are never concatenated or mixed."
+  },
+  "limitations": [
+    "This small subset checks representation sensitivity, not population prevalence or generalization.",
+    "DINOv2 sees VIS-only fixed-centre crops while the published Zoobot pipeline uses different VIS+Y inputs and upstream preprocessing.",
+    "Distance normalization and dimensionality also differ, so any change is a pipeline comparison, not an isolated architecture effect.",
+    "Candidate grades are incomplete, selected annotations; reference objects are unlabelled, not confirmed non-lenses."
+  ],
+  "execution": {
+    "device": "cpu",
+    "cpu_threads": 2,
+    "batch_size": 4,
+    "inference_seconds": 12.60084574099892,
+    "versions": {
+      "torch": "2.14.0+cpu",
+      "transformers": "4.57.6",
+      "Pillow": "12.3.0",
+      "numpy": "2.3.5"
+    }
+  },
+  "sample_sha256": "0e4056b2f1889b0f176d61b63693e9e70fcf3db82b816979f649ec405e405556",
+  "stamp_sha256": "daae08b5ce69d8cde5374b17bc8d0250cafe19eb2e1f2d010a39e50c1eb6be29",
+  "output_sha256": "29712ad0a389a3806e09b2843a7dcc12942656bcc551769d4cd282c02a49c477",
+  "unavailable_image_reasons": {
+    "-586591064470200400": "unavailable: ValueError: incomplete 9.6arcsec stamp: finite fraction 0.000000"
+  }
+}
